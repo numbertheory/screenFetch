@@ -3088,290 +3088,39 @@ asciiText () {
 		;;
 
 		"Arch Linux"|"Arch Linux 32")
-			if [[ "$no_color" != "1" ]]; then
-				c1=$(getColor 'light cyan') # Light
-				c2=$(getColor 'cyan') # Dark
-			fi
-			if [ -n "${my_lcolor}" ]; then c1="${my_lcolor}"; c2="${my_lcolor}"; fi
-			startline="1"
-			logowidth="38"
-			fulloutput=(
-"${c1}                   -\`                 "
-"${c1}                  .o+\`                %s"
-"${c1}                 \`ooo/                %s"
-"${c1}                \`+oooo:               %s"
-"${c1}               \`+oooooo:              %s"
-"${c1}               -+oooooo+:             %s"
-"${c1}             \`/:-:++oooo+:            %s"
-"${c1}            \`/++++/+++++++:           %s"
-"${c1}           \`/++++++++++++++:          %s"
-"${c1}          \`/+++o${c2}oooooooo${c1}oooo/\`        %s"
-"${c2}         ${c1}./${c2}ooosssso++osssssso${c1}+\`       %s"
-"${c2}        .oossssso-\`\`\`\`/ossssss+\`      %s"
-"${c2}       -osssssso.      :ssssssso.     %s"
-"${c2}      :osssssss/        osssso+++.    %s"
-"${c2}     /ossssssss/        +ssssooo/-    %s"
-"${c2}   \`/ossssso+/:-        -:/+osssso+-  %s"
-"${c2}  \`+sso+:-\`                 \`.-/+oso: %s"
-"${c2} \`++:.                           \`-/+/%s"
-"${c2} .\`                                 \`/%s")
+			source assets/arch-linux.sh
 		;;
 
 		"Artix Linux")
-			if [[ "$no_color" != "1" ]]; then
-				c1=$(getColor 'cyan')
-				c2=$(getColor 'blue')
-				c3=$(getColor 'green')
-				c4=$(getColor 'dark gray')
-			fi
-			if [ -n "${my_lcolor}" ]; then
-				c1="${my_lcolor}"
-				c2="${my_lcolor}"
-				c3="${my_lcolor}"
-				c4="${my_lcolor}"
-			fi
-			startline="1"
-			logowidth="38"
-			fulloutput=(""
-"${c1}                        d${c2}c.           %s"
-"${c1}                       x${c2}dc.           %s"
-"${c1}                  '.${c4}.${c1} d${c2}dlc.           %s"
-"${c1}                 c${c2}0d:${c1}o${c2}xllc;           %s"
-"${c1}                :${c2}0ddlolc,lc,          %s"
-"${c1}           :${c1}ko${c4}.${c1}:${c2}0ddollc..dlc.         %s"
-"${c1}          ;${c1}K${c2}kxoOddollc'  cllc.        %s"
-"${c1}         ,${c1}K${c2}kkkxdddllc,   ${c4}.${c2}lll:        %s"
-"${c1}        ,${c1}X${c2}kkkddddlll;${c3}...';${c1}d${c2}llll${c3}dxk:   %s"
-"${c1}       ,${c1}X${c2}kkkddddllll${c3}oxxxddo${c2}lll${c3}oooo,   %s"
-"${c3}    xxk${c1}0${c2}kkkdddd${c1}o${c2}lll${c1}o${c3}ooooooolooooc;${c1}.   %s"
-"${c3}    ddd${c2}kkk${c1}d${c2}ddd${c1}ol${c2}lc:${c3}:;,'.${c3}... .${c2}lll;     %s"
-"${c1}   .${c3}xd${c1}x${c2}kk${c1}xd${c2}dl${c1}'cl:${c4}.           ${c2}.llc,    %s"
-"${c1}   .${c1}0${c2}kkkxddl${c4}. ${c2};'${c4}.             ${c2};llc.   %s"
-"${c1}  .${c1}K${c2}Okdcddl${c4}.                   ${c2}cllc${c4}.  %s"
-"${c1}  0${c2}Okd''dc.                    .cll;  %s"
-"${c1} k${c2}Okd'                          .llc, %s"
-"${c1} d${c2}Od,                            'lc. %s"
-"${c1} :,${c4}.                              ${c2}... %s"
-"                                                   %s")
+			source assets/artix-linux.sh
 		;;
 
 		"blackPanther OS")
-			if [[ "$no_color" != "1" ]]; then
-				c1=$(getColor 'yellow') # Light Yellow
-				c2=$(getColor 'white') # Bold Red
-				c3=$(getColor 'light red') # Light Red
-				c4=$(getColor 'dark grey')
-			fi
-			if [ -n "${my_lcolor}" ]; then
-				c1="${my_lcolor}"
-				c2="${my_lcolor}"
-				c3="${my_lcolor}"
-				c4="${my_lcolor}"
-			fi
-			startline="0"
-			logowidth="38"
-			fulloutput=(
-"${c4}                oxoo              %s"
-"${c4}           ooooooxxxxxxxx         %s"
-"${c4}      oooooxxxxxxxxxx${c3}O${c1}o.${c4}xx        %s"
-"${c4}    oo# ###xxxxxxxxxxx###xxx      %s"
-"${c4}  oo .oooooxxxxxxxxx##   #oxx     %s"
-"${c4} o  ##xxxxxxxxx###x##   .o###     %s"
-"${c4}  .oxxxxxxxx###   ox  .           %s"
-"${c4} ooxxxx#xxxxxx     o##            %s"
-"${c4}.oxx# #oxxxxx#                    %s"
-"${c4}ox#  ooxxxxxx#                  o %s"
-"${c4}x#  ooxxxxxxxx           ox     ox%s"
-"${c4}x# .oxxxxxxxxxxx        o#     oox%s"
-"${c4}#  oxxxxx##xxxxxxooooooo#      o# %s"
-"${c4}  .oxxxxxooxxxxxx######       ox# %s"
-"${c4}  oxxxxxo oxxxxxxxx         oox## %s"
-"${c4}  oxxxxxx  oxxxxxxxxxo   oooox##  %s"
-"${c4}   o#xxxxx  oxxxxxxxxxxxxxxxx##   %s"
-"${c4}    ##xxxxx  o#xxxxxxxxxxxxx##    %s"
-"${c4}      ##xxxx   o#xxxxxxxxx##      %s"
-"${c4}         ###xo.  o##xxx###        %s"
-"${c4}                                  %s")
-			;;
+			source assets/blackPanther-os.sh
+		;;
 
 		"ArcoLinux")
-			if [[ "$no_color" != "0" ]]; then
-				c1=$(getColor 'arco_blue') # dark
-				c2=$(getColor 'white') # light
-			fi
-			if [ -n "${my_lcolor}" ]; then c1="${my_lcolor}"; c2="${my_lcolor}"; fi
-			startline="1"
-			logowidth="41"
-			fulloutput=(
-
-"${c1}                    /-                   "
-"${c1}                   ooo:                  %s"
-"${c1}                  yoooo/                 %s"
-"${c1}                 yooooooo                %s"
-"${c1}                yooooooooo               %s"
-"${c1}               yooooooooooo              %s"
-"${c1}             .yooooooooooooo             %s"
-"${c1}            .oooooooooooooooo            %s"
-"${c1}           .oooooooarcoooooooo           %s"
-"${c1}          .ooooooooo-oooooooooo          %s"
-"${c1}         .ooooooooo-  oooooooooo         %s"
-"${c1}        :ooooooooo.    :ooooooooo        %s"
-"${c1}       :ooooooooo.      :ooooooooo       %s"
-"${c1}      :oooarcooo         .oooarcooo      %s"
-"${c1}     :ooooooooy           .ooooooooo     %s"
-"${c1}    :ooooooooo   ${c2}/ooooooooooooooooooo${c1}    %s"
-"${c1}   :ooooooooo      ${c2}.-ooooooooooooooooo.${c1}  %s"
-"${c1}  ooooooooo-             ${c2}-ooooooooooooo.${c1} %s"
-"${c1} ooooooooo-                 ${c2}.-oooooooooo.${c1}%s"
-"${c1}ooooooooo.                     ${c2}-ooooooooo${c1}%s")
+			source assets/arcolinux.sh
 		;;
 
 		"Alter Linux"|"Alter")
-			if [[ "$no_color" != "1" ]]; then
-				c1=$(getColor 'light cyan') # Light
-				c2=$(getColor 'cyan') # Dark
-			fi
-			if [ -n "${my_lcolor}" ]; then c1="${my_lcolor}"; c2="${my_lcolor}"; fi
-			startline="1"
-			logowidth="38"
-			fulloutput=(
-"${c1}                      &,                       "
-"${c1}                    ^WWWw                      %s"
-"${c1}                   !wwwwww                     %s"
-"${c1}                  !wwwwwwww                    %s"
-"${c1}                 #wwwwwwwwww                   %s"
-"${c1}                @wwwwwwwwwwww                  %s"
-"${c1}               wwwwwwwwwwwwwww                 %s"
-"${c1}              wwwwwwwwwwwwwwwww                %s"
-"${c1}             wwwwwwwwwwwwwwwwwww               %s"
-"${c1}            wwwwwwwwwwwwwwwwwwww,              %s"
-"${c1}           w~1i.wwwwwwwwwwwwwwwww,             %s"
-"${c1}         3~:~1lli.wwwwwwwwwwwwwwww.            %s"
-"${c1}        :~~:~?ttttzwwwwwwwwwwwwwwww            %s"
-"${c1}       #<~:~~~~?llllltO-.wwwwwwwwwww           %s"
-"${c1}      #~:~~:~:~~?ltlltlttO-.wwwwwwwww          %s"
-"${c1}     @~:~~:~:~:~~(zttlltltlOda.wwwwwww         %s"
-"${c1}    @~:~~: ~:~~:~:(zltlltlO    a,wwwwww        %s"
-"${c1}   8~~:~~:~~~~:~~~~_1ltltu          ,www       %s"
-"${c1}  5~~:~~:~~:~~:~~:~~~_1ltq             N,,     %s"
-"${c1} g~:~~:~~~:~~:~~:~:~~~~1q                N,    %s" )
+			source assets/alter.sh
 		;;
 
 		"Mint")
-			if [[ "$no_color" != "1" ]]; then
-				c1=$(getColor 'white') # White
-				c2=$(getColor 'light green') # Bold Green
-			fi
-			if [ -n "${my_lcolor}" ]; then c1="${my_lcolor}"; c2="${my_lcolor}"; fi
-			startline="0"
-			logowidth="38"
-			fulloutput=(
-"${c2}                                      %s"
-"${c2} MMMMMMMMMMMMMMMMMMMMMMMMMmds+.       %s"
-"${c2} MMm----::-://////////////oymNMd+\`    %s"
-"${c2} MMd      ${c1}/++                ${c2}-sNMd:   %s"
-"${c2} MMNso/\`  ${c1}dMM    \`.::-. .-::.\` ${c2}.hMN:  %s"
-"${c2} ddddMMh  ${c1}dMM   :hNMNMNhNMNMNh: ${c2}\`NMm  %s"
-"${c2}     NMm  ${c1}dMM  .NMN/-+MMM+-/NMN\` ${c2}dMM  %s"
-"${c2}     NMm  ${c1}dMM  -MMm  \`MMM   dMM. ${c2}dMM  %s"
-"${c2}     NMm  ${c1}dMM  -MMm  \`MMM   dMM. ${c2}dMM  %s"
-"${c2}     NMm  ${c1}dMM  .mmd  \`mmm   yMM. ${c2}dMM  %s"
-"${c2}     NMm  ${c1}dMM\`  ..\`   ...   ydm. ${c2}dMM  %s"
-"${c2}     hMM- ${c1}+MMd/-------...-:sdds  ${c2}dMM  %s"
-"${c2}     -NMm- ${c1}:hNMNNNmdddddddddy/\`  ${c2}dMM  %s"
-"${c2}      -dMNs-${c1}\`\`-::::-------.\`\`    ${c2}dMM  %s"
-"${c2}       \`/dMNmy+/:-------------:/yMMM  %s"
-"${c2}          ./ydNMMMMMMMMMMMMMMMMMMMMM  %s"
-"${c2}             \.MMMMMMMMMMMMMMMMMMM    %s"
-"${c2}                                      %s")
+			source assets/mint.sh
 		;;
 
 		"LMDE")
-			if [[ "$no_color" != "1" ]]; then
-				c1=$(getColor 'white') # White
-				c2=$(getColor 'light green') # Bold Green
-			fi
-			if [ -n "${my_lcolor}" ]; then c1="${my_lcolor}"; c2="${my_lcolor}"; fi
-			startline="0"
-			logowidth="31"
-			fulloutput=(
-"${c1}          \`.-::---..           %s"
-"${c2}       .:++++ooooosssoo:.      %s"
-"${c2}     .+o++::.      \`.:oos+.    %s"
-"${c2}    :oo:.\`             -+oo${c1}:   %s"
-"${c2}  ${c1}\`${c2}+o/\`    .${c1}::::::${c2}-.    .++-${c1}\`  %s"
-"${c2} ${c1}\`${c2}/s/    .yyyyyyyyyyo:   +o-${c1}\`  %s"
-"${c2} ${c1}\`${c2}so     .ss       ohyo\` :s-${c1}:  %s"
-"${c2} ${c1}\`${c2}s/     .ss  h  m  myy/ /s\`${c1}\`  %s"
-"${c2} \`s:     \`oo  s  m  Myy+-o:\`   %s"
-"${c2} \`oo      :+sdoohyoydyso/.     %s"
-"${c2}  :o.      .:////////++:       %s"
-"${c2}  \`/++        ${c1}-:::::-          %s"
-"${c2}   ${c1}\`${c2}++-                        %s"
-"${c2}    ${c1}\`${c2}/+-                       %s"
-"${c2}      ${c1}.${c2}+/.                     %s"
-"${c2}        ${c1}.${c2}:+-.                  %s"
-"${c2}           \`--.\`\`              %s"
-"${c2}                               %s")
+			source assets/lmde.sh
 		;;
 
 		"Ubuntu")
-			if [[ "$no_color" != "1" ]]; then
-				c1=$(getColor 'white') # White
-				c2=$(getColor 'light red') # Light Red
-				c3=$(getColor 'yellow') # Bold Yellow
-			fi
-			if [ -n "${my_lcolor}" ]; then c1="${my_lcolor}"; c2="${my_lcolor}"; c3="${my_lcolor}"; fi
-			startline="0"
-			logowidth="38"
-			fulloutput=(
-"${c2}                          ./+o+-      %s"
-"${c1}                  yyyyy- ${c2}-yyyyyy+     %s"
-"${c1}               ${c1}://+//////${c2}-yyyyyyo     %s"
-"${c3}           .++ ${c1}.:/++++++/-${c2}.+sss/\`     %s"
-"${c3}         .:++o:  ${c1}/++++++++/:--:/-     %s"
-"${c3}        o:+o+:++.${c1}\`..\`\`\`.-/oo+++++/    %s"
-"${c3}       .:+o:+o/.${c1}          \`+sssoo+/   %s"
-"${c1}  .++/+:${c3}+oo+o:\`${c1}             /sssooo.  %s"
-"${c1} /+++//+:${c3}\`oo+o${c1}               /::--:.  %s"
-"${c1} \+/+o+++${c3}\`o++o${c2}               ++////.  %s"
-"${c1}  .++.o+${c3}++oo+:\`${c2}             /dddhhh.  %s"
-"${c3}       .+.o+oo:.${c2}          \`oddhhhh+   %s"
-"${c3}        \+.++o+o\`${c2}\`-\`\`\`\`.:ohdhhhhh+    %s"
-"${c3}         \`:o+++ ${c2}\`ohhhhhhhhyo++os:     %s"
-"${c3}           .o:${c2}\`.syhhhhhhh/${c3}.oo++o\`     %s"
-"${c2}               /osyyyyyyo${c3}++ooo+++/    %s"
-"${c2}                   \`\`\`\`\` ${c3}+oo+++o\:    %s"
-"${c3}                          \`oo++.      %s")
+			source assets/ubuntu.sh
 		;;
 
 		"KDE neon")
-			if [[ "$no_color" != "1" ]]; then
-				c1=$(getColor 'light green') # Bold Green
-			fi
-			if [ -n "${my_lcolor}" ]; then c1="${my_lcolor}"; fi
-			startline="0"
-			logowidth="43"
-			fulloutput=(
-"${c1}              \`..---+/---..\`               %s"
-"${c1}          \`---.\`\`   \`\`   \`.---.\`           %s"
-"${c1}       .--.\`        \`\`        \`-:-.        %s"
-"${c1}     \`:/:     \`.----//----.\`     :/-       %s"
-"${c1}    .:.    \`---\`          \`--.\`    .:\`     %s"
-"${c1}   .:\`   \`--\`                .:-    \`:.    %s"
-"${c1}  \`/    \`:.      \`.-::-.\`      -:\`   \`/\`   %s"
-"${c1}  /.    /.     \`:++++++++:\`     .:    .:   %s"
-"${c1} \`/    .:     \`+++++++++++/      /\`   \`+\`  %s"
-"${c1} /+\`   --     .++++++++++++\`     :.   .+:  %s"
-"${c1} \`/    .:     \`+++++++++++/      /\`   \`+\`  %s"
-"${c1}  /\`    /.     \`:++++++++:\`     .:    .:   %s"
-"${c1}  ./    \`:.      \`.:::-.\`      -:\`   \`/\`   %s"
-"${c1}   .:\`   \`--\`                .:-    \`:.    %s"
-"${c1}    .:.    \`---\`          \`--.\`    .:\`     %s"
-"${c1}     \`:/:     \`.----//----.\`     :/-       %s"
-"${c1}       .-:.\`        \`\`        \`-:-.        %s"
-"${c1}          \`---.\`\`   \`\`   \`.---.\`           %s"
-"${c1}              \`..---+/---..\`               %s")
+			source assets/kde-neon.sh
 		;;
 
 		"Debian")
